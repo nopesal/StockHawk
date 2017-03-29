@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="32dp"
+    tools:context="com.udacity.stockhawk.ui.DetailsActivity">
+
+    <TextView
+        android:id="@+id/details_quote_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:text="APPL"/>
+
+    <TextView
+        android:id="@+id/details_quote_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/details_quote_price"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:text="@string/currency"/>
+
+    <TextView
+        android:id="@+id/details_quote_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/details_quote_currency"
+        android:textSize="32sp"
+        android:layout_marginEnd="4dp"
+        tools:text="139.84"/>
+
+</RelativeLayout>

@@ -103,7 +103,7 @@ public class DetailsActivity extends AppCompatActivity {
         limitLine.setLineColor(ContextCompat.getColor(this, R.color.colorAccent));
         limitLine.setLineWidth(2f);
         limitLine.setTextColor(ContextCompat.getColor(this, R.color.colorAccent));
-        limitLine.setTextSize(10f);
+        limitLine.setTextSize(12f);
         limitLine.setLabelPosition(LimitLine.LimitLabelPosition.LEFT_TOP);
         limitLine.setTextStyle(Paint.Style.FILL);
         limitLine.enableDashedLine(10f, 10f, 0);
@@ -121,7 +121,7 @@ public class DetailsActivity extends AppCompatActivity {
         lineDataSet.setDrawFilled(true);
         lineDataSet.setFillColor(Color.GRAY);
         lineDataSet.setValueTextColor(Color.WHITE);
-        lineDataSet.setValueTextSize(8f);
+        lineDataSet.setValueTextSize(10f);
         lineDataSet.setFillColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
         lineDataSet.setFillAlpha(50);
         lineDataSet.setCircleColor(ContextCompat.getColor(this, R.color.colorAccent));

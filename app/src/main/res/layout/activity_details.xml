@@ -48,6 +48,7 @@
         android:id="@+id/details_line_chart"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:contentDescription="@string/chart_description"
         android:layout_below="@id/details_price_linear_layout"
         android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 

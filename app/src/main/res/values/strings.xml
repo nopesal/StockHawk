@@ -1,24 +1,24 @@
 <resources>
-    <string name="app_name">Stock Hawk</string>
+    <string name="app_name" translatable="false">Stock Hawk</string>
 
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
 
-    <string name="pref_stocks_key">stocks</string>
+    <string name="pref_stocks_key" translatable="false">stocks</string>
 
 
-    <string name="pref_display_mode_key">displayMode</string>
-    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
 
-    <string name="pref_display_mode_absolute_key">absolute</string>
-    <string name="pref_display_mode_percentage_key">percentage</string>
+    <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
+    <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
 
-    <string name="default_stocks_yahoo">YHOO</string>
-    <string name="default_stocks_apple">AAPL</string>
-    <string name="default_stocks_microsoft">MSFT</string>
-    <string name="default_stocks_facebook">FB</string>
+    <string name="default_stocks_yahoo" translatable="false">YHOO</string>
+    <string name="default_stocks_apple" translatable="false">AAPL</string>
+    <string name="default_stocks_microsoft" translatable="false">MSFT</string>
+    <string name="default_stocks_facebook" translatable="false">FB</string>
 
 
-    <string name="action_change_units">@string/pref_display_mode_key</string>
+    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
 
 
     <string name="dialog_title">Add Stock</string>
@@ -26,12 +26,28 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_add">Add</string>
 
-    <string name="error_no_network">There is not network available. Please, check the device has internet connection.</string>
+    <string name="error_no_network">There is not network available. Stocks may be outdated. Please, check the device has internet connection.</string>
     <string name="error_no_stocks">You can add a new stock by pressing the button below.</string>
 
     <string name="toast_stock_added_no_connectivity">Stock %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
-    <string name="title_activity_details">DetailsActivity</string>
-    <string name="currency">USD</string>
+    <string name="title_activity_details" translatable="false">DetailsActivity</string>
+    <string name="currency" translatable="false">USD</string>
+    <string name="symbol_key" translatable="false">symbol</string>
+    <string name="history_key" translatable="false">history</string>
+    <string name="price_key" translatable="false">price</string>
+    <string name="line_dataset_description">Value at close in USD.</string>
+    <string name="january_abbreviation">JAN</string>
+    <string name="february_abbreviation">FEB</string>
+    <string name="march_abbreviation">MAR</string>
+    <string name="april_abbreviation">APR</string>
+    <string name="may_abbreviation">MAY</string>
+    <string name="june_abbreviation">JUN</string>
+    <string name="july_abbreviation">JUL</string>
+    <string name="august_abbreviation">AUG</string>
+    <string name="september_abbreviation">SEP</string>
+    <string name="october_abbreviation">OCT</string>
+    <string name="november_abbreviation">NOV</string>
+    <string name="december_abbreviation">DEC</string>
 
 </resources>

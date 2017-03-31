@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onClick(String symbol, String history, String price) {
         Intent intent = new Intent(this, DetailsActivity.class);
-        intent.putExtra("symbol", symbol);
-        intent.putExtra("history", history);
-        intent.putExtra("price", price);
+        intent.putExtra(getString(R.string.symbol_key), symbol);
+        intent.putExtra(getString(R.string.history_key), history);
+        intent.putExtra(getString(R.string.price_key), price);
         startActivity(intent);
     }
 

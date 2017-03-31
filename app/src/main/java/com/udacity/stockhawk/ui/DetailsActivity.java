@@ -1,15 +1,14 @@
 package com.udacity.stockhawk.ui;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Legend;
@@ -25,8 +24,6 @@ import com.udacity.stockhawk.R;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,9 +40,9 @@ public class DetailsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String symbol = getIntent().getStringExtra("symbol");
-        String history = getIntent().getStringExtra("history");
-        String price = getIntent().getStringExtra("price");
+        String symbol = getIntent().getStringExtra(getString(R.string.symbol_key));
+        String history = getIntent().getStringExtra(getString(R.string.history_key));
+        String price = getIntent().getStringExtra(getString(R.string.price_key));
 
         mPriceTextView.setText(price);
         mSymbolTextView.setText(symbol);
@@ -64,7 +61,7 @@ public class DetailsActivity extends AppCompatActivity {
                 String dateInMillis = history.substring(i - 13, i);
                 calendar.setTimeInMillis(Long.parseLong(dateInMillis));
                 labels.add(calendar.get(Calendar.DAY_OF_MONTH) + "/"
-                        + getMonthName(calendar.get(Calendar.MONTH)) + "/"
+                        + getMonthName(this, calendar.get(Calendar.MONTH)) + "/"
                         + calendar.get(Calendar.YEAR));
             }
             if (history.charAt(i) == '\n') {
@@ -117,7 +114,7 @@ public class DetailsActivity extends AppCompatActivity {
         Legend legend = mLineChart.getLegend();
         legend.setEnabled(false);
 
-        LineDataSet lineDataSet = new LineDataSet(entries, "Value at close in USD.");
+        LineDataSet lineDataSet = new LineDataSet(entries, getString(R.string.line_dataset_description));
         lineDataSet.setDrawFilled(true);
         lineDataSet.setFillColor(Color.GRAY);
         lineDataSet.setValueTextColor(Color.WHITE);
@@ -130,32 +127,32 @@ public class DetailsActivity extends AppCompatActivity {
         mLineChart.setData(data);
     }
 
-    public static String getMonthName(int month) {
+    private static String getMonthName(Context context, int month) {
         switch (month) {
             case (Calendar.JANUARY):
-                return "JAN";
+                return context.getString(R.string.january_abbreviation);
             case (Calendar.FEBRUARY):
-                return "FEB";
+                return context.getString(R.string.february_abbreviation);
             case (Calendar.MARCH):
-                return "MAR";
+                return context.getString(R.string.march_abbreviation);
             case (Calendar.APRIL):
-                return "APR";
+                return context.getString(R.string.april_abbreviation);
             case (Calendar.MAY):
-                return "MAY";
+                return context.getString(R.string.may_abbreviation);
             case (Calendar.JUNE):
-                return "JUN";
+                return context.getString(R.string.june_abbreviation);
             case (Calendar.JULY):
-                return "JUL";
+                return context.getString(R.string.july_abbreviation);
             case (Calendar.AUGUST):
-                return "AUG";
+                return context.getString(R.string.august_abbreviation);
             case (Calendar.SEPTEMBER):
-                return "SEP";
+                return context.getString(R.string.september_abbreviation);
             case (Calendar.OCTOBER):
-                return "OCT";
+                return context.getString(R.string.october_abbreviation);
             case (Calendar.NOVEMBER):
-                return "NOV";
+                return context.getString(R.string.november_abbreviation);
             case (Calendar.DECEMBER):
-                return "DEC";
+                return context.getString(R.string.december_abbreviation);
         }
         return null;
     }

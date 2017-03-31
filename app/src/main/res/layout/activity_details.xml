@@ -4,35 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
     tools:context="com.udacity.stockhawk.ui.DetailsActivity">
 
     <TextView
         android:id="@+id/details_quote_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="32sp"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="46sp"
         android:textStyle="bold"
         tools:text="APPL"/>
 
-    <TextView
-        android:id="@+id/details_quote_currency"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/details_quote_price"
-        android:layout_alignParentEnd="true"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="4dp"
-        android:text="@string/currency"/>
+        android:id="@+id/details_price_linear_layout"
+        android:layout_below="@id/details_quote_symbol"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true">
 
-    <TextView
-        android:id="@+id/details_quote_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/details_quote_currency"
-        android:textSize="32sp"
-        android:layout_marginEnd="4dp"
-        tools:text="139.84"/>
+        <TextView
+            android:id="@+id/details_quote_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            tools:text="139.84"/>
+
+        <TextView
+            android:id="@+id/details_quote_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/currency"
+            android:layout_marginStart="4dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/details_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/details_price_linear_layout"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
 
 </RelativeLayout>

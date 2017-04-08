@@ -118,7 +118,7 @@ class ListRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory {
         fillInIntent.putExtra(mContext.getString(R.string.symbol_key), symbol);
         fillInIntent.putExtra(mContext.getString(R.string.history_key), history);
         fillInIntent.putExtra(mContext.getString(R.string.price_key), String.valueOf(price));
-        remoteViews.setOnClickFillInIntent(R.layout.list_item_quote, fillInIntent);
+        remoteViews.setOnClickFillInIntent(R.id.quote_list_item_linear_layout, fillInIntent);
 
         return remoteViews;
     }

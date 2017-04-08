@@ -41,7 +41,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
 
             appWidgetManager.updateAppWidget(appWidgetIds[i], remoteViews);
             appWidgetManager.notifyAppWidgetViewDataChanged(i, R.id.stock_widget_list_view);
-
         }
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
